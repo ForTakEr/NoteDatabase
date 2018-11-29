@@ -36,7 +36,18 @@ namespace Note
 
         private void NoteAddBtn_Click(object sender, System.EventArgs e)
         {
-            throw new System.NotImplementedException();
+            Notes notes = new Notes();
+            var titleInput = FindViewById<EditText>(Resource.Id.inputTitle);
+            var contentInput = FindViewById<EditText>(Resource.Id.inputContent);
+
+            notes.Title = titleInput.Text;
+            notes.Content = contentInput.Text;
+
+            databaseService.AddNote(notes);
+
+            var note = databaseService.GetAllNotes();
+            var listView = FindViewById<ListView>(Resource.Id.listView1);
+            listView.Adapter = new CustomAdapter(this, note, databaseService);
         }
     }
 }
