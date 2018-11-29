@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout1">
+		<android.support.design.widget.TextInputEditText
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/inputTitle"
+			android:hint="Title" />
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/linearLayout2">
+			<android.support.design.widget.TextInputEditText
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/inputContent"
+				android:hint="Content" />
+		</LinearLayout>
+		<Button
+		android:text="Add"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/addNoteBtn"
+		android:layout_below="@id/linearLayout1" />
+	</LinearLayout>
+	<ListView
+		android:paddingTop="32px"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/linearLayout1"
+		android:id="@+id/listView1" />
+</RelativeLayout>
